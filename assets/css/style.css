@@ -314,6 +314,9 @@ h6 {
 @media (min-width: 992px) {
   #hero {
     padding-left: 160px;
+    position: relative;
+    background-position: center bottom;
+    background-size: 240px;
   }
 }
 
