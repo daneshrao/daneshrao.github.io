@@ -311,12 +311,17 @@ h6 {
   background-size: 600px;
 }
 
-@media (min-width: 992px) {
+/* @media (max-width: 992px) {
   #hero {
     padding-left: 160px;
     position: relative;
     background-position: center bottom;
     background-size: 240px;
+  }
+} */
+@media (min-width: 992px) {
+  #hero {
+    padding-left: 160px;
   }
 }
 
