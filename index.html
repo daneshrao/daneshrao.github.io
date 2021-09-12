@@ -162,7 +162,20 @@
           <h2>Skills</h2>
         </div>
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-lg-6" id="tag-cloud">
+          </div>
+          <div class="col-lg-6 skill__content">
+            <p>
+              My Primary area of interest is backend development and DevOps.
+              For the past 5 years, i have harnessed my skills as a build and release engineer
+              With an higly demonstrable experience in Cloud and Deployment automations.
+            </p>
+            <p>
+              My passion towards development pulled me towards in adopting python as my
+              base programming language and i am continuing the Journey.
+            </p>
+          </div>
+          <!-- <div class="col-md-3">
             <div class="card card-flip h-100">
               <div class="card-front">
                 <div class="card-body">
@@ -245,7 +258,8 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
+
         </div>
       </div>
     </section>
@@ -514,6 +528,75 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./assets/js/jquery.svg3dtagcloud.js"></script>
+  <script src="./assets/js/jquery.svg3dtagcloud.min.js"></script>
+  <script>
+
+    $(document).ready(function () {
+
+      var entries = [
+
+        { label: 'python', url: '#', target: '_blank' },
+        { label: 'nodejs', url: '#', target: '_blank' },
+        { label: 'Reactjs', url: '#', target: '_blank' },
+        { label: 'javascript', url: '#', target: '_blank' },
+        { label: 'HTML5', url: '#', target: '_blank' },
+        { label: 'CSS', url: '#', target: '_blank' },
+        { label: 'Flask', url: '#', target: '_blank' },
+        { label: 'MySQL', url: '#', target: '_blank' },
+        { label: 'DynamoDB', url: '#', target: '_blank' },
+        { label: 'CosmosDB', url: '#', target: '_blank' },
+        { label: 'Git', url: '#', target: '_blank' },
+        { label: 'Gitlab', url: '#', target: '_blank' },
+        { label: 'Jenkins', url: '#', target: '_blank' },
+        { label: 'Elasticsearch', url: '#', target: '_blank' },
+        { label: 'Kibana', url: '#', target: '_blank' },
+        { label: 'Prometheus', url: '#', target: '_blank' },
+        { label: 'Grafana', url: '#', target: '_blank' },
+        { label: 'Datadog', url: '#', target: '_blank' },
+        { label: 'Docker', url: '#', target: '_blank' },
+        { label: 'Kubernetes', url: '#', target: '_blank' },
+        { label: 'Ansible', url: '#', target: '_blank' },
+        { label: 'Terraform', url: '#', target: '_blank' },
+        { label: 'AWS', url: '#', target: '_blank' },
+        { label: 'GCP', url: '#', target: '_blank' },
+        { label: 'Firebase', url: '#', target: '_blank' },
+        { label: 'Jira', url: '#', target: '_blank' },
+
+      ];
+
+      var settings = {
+
+        entries: entries,
+        width: "100%",
+        height: "80vh",
+        radius: '65%',
+        radiusMin: 75,
+        bgDraw: true,
+        bgColor: 'transparent',
+        opacityOver: 1.00,
+        opacityOut: 0.05,
+        opacitySpeed: 6,
+        fov: 800,
+        speed: 0.65,
+        fontFamily: 'Oswald, Arial, sans-serif',
+        fontSize: '15',
+        fontColor: '#622773',
+        fontWeight: 'bold',//bold
+        fontStyle: 'normal',//italic 
+        fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+        fontToUpperCase: true
+
+      };
+
+      //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+      $('#tag-cloud').svg3DTagCloud(settings);
+
+    });
+
+  </script>
 
   <script defer src="assets/js/main.js"></script>
 </body>
